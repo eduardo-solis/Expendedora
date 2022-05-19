@@ -89,7 +89,7 @@ namespace Expendedora
             this.lbPrecio.Name = "lbPrecio";
             this.lbPrecio.Size = new System.Drawing.Size(22, 13);
             this.lbPrecio.TabIndex = 2;
-            this.lbPrecio.Text = "4.5";
+            this.lbPrecio.Text = "4,5";
             // 
             // label3
             // 
@@ -355,6 +355,7 @@ namespace Expendedora
             this.cambiarToolStripMenuItem.Name = "cambiarToolStripMenuItem";
             this.cambiarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cambiarToolStripMenuItem.Text = "Cambiar";
+            this.cambiarToolStripMenuItem.Click += new System.EventHandler(this.cambiarToolStripMenuItem_Click);
             // 
             // Form1
             // 

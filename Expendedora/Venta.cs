@@ -9,7 +9,7 @@ namespace Expendedora
     class Venta
     {
 
-        private int precio;
+        private double precio;
         
         private int cantidad_coca;
         private int cantidad_fresca;
@@ -20,7 +20,7 @@ namespace Expendedora
         private double saldo;
         private double cambio;
 
-        public int Precio { get => precio; set => precio = value; }
+        public double Precio { get => precio; set => precio = value; }
         public int Cantidad_coca { get => cantidad_coca; set => cantidad_coca = value; }
         public int Cantidad_fresca { get => cantidad_fresca; set => cantidad_fresca = value; }
         public int Cantidad_fanta { get => cantidad_fanta; set => cantidad_fanta = value; }
@@ -54,7 +54,10 @@ namespace Expendedora
 
         }
 
-
+        public void cambiar_precio(double precio)
+        {
+            this.Precio = precio;
+        }
 
 
     }

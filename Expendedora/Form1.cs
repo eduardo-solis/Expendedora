@@ -100,5 +100,19 @@ namespace Expendedora
         {
             surtirRefresco(5);
         }
+
+        private void cambiarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double nuevo_precio = Convert.ToDouble(Microsoft.VisualBasic.Interaction.InputBox("Ingrese el precio de los refrescos", "Precio del refresco", "4,5"));
+                venta.cambiar_precio(nuevo_precio);
+                lbPrecio.Text = Convert.ToString(venta.Precio);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message + "\nDebe ser un numero decimal.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
