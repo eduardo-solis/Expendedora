@@ -29,7 +29,30 @@ namespace Expendedora
         public double Saldo { get => saldo; set => saldo = value; }
         public double Cambio { get => cambio; set => cambio = value; }
 
+        public void surtir(int cantidad, int refresco)
+        {
 
+            switch (refresco)
+            {
+                case 1:
+                    this.Cantidad_coca = this.Cantidad_coca + cantidad;
+                    break;
+                case 2:
+                    this.Cantidad_fresca = this.Cantidad_fresca + cantidad;
+                    break;
+                case 3:
+                    this.Cantidad_fanta = this.Cantidad_fanta + cantidad;
+                    break;
+                case 4:
+                    this.Cantidad_sprite = this.Cantidad_sprite + cantidad;
+                    break;
+                case 5:
+                    this.Cantidad_manzanita = this.Cantidad_manzanita + cantidad;
+                    break;
+            }
+
+
+        }
 
 
 

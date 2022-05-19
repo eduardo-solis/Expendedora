@@ -327,24 +327,28 @@ namespace Expendedora
             this.frescaToolStripMenuItem.Name = "frescaToolStripMenuItem";
             this.frescaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.frescaToolStripMenuItem.Text = "Fresca";
+            this.frescaToolStripMenuItem.Click += new System.EventHandler(this.frescaToolStripMenuItem_Click);
             // 
             // fantaToolStripMenuItem
             // 
             this.fantaToolStripMenuItem.Name = "fantaToolStripMenuItem";
             this.fantaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.fantaToolStripMenuItem.Text = "Fanta";
+            this.fantaToolStripMenuItem.Click += new System.EventHandler(this.fantaToolStripMenuItem_Click);
             // 
             // spriteToolStripMenuItem
             // 
             this.spriteToolStripMenuItem.Name = "spriteToolStripMenuItem";
             this.spriteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.spriteToolStripMenuItem.Text = "Sprite";
+            this.spriteToolStripMenuItem.Click += new System.EventHandler(this.spriteToolStripMenuItem_Click);
             // 
             // manzanitaToolStripMenuItem
             // 
             this.manzanitaToolStripMenuItem.Name = "manzanitaToolStripMenuItem";
             this.manzanitaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.manzanitaToolStripMenuItem.Text = "Manzanita";
+            this.manzanitaToolStripMenuItem.Click += new System.EventHandler(this.manzanitaToolStripMenuItem_Click);
             // 
             // cambiarToolStripMenuItem
             // 
