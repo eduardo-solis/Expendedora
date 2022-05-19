@@ -269,6 +269,7 @@ namespace Expendedora
             this.btnDespachar.TabIndex = 12;
             this.btnDespachar.Text = "Seleccione su refresco";
             this.btnDespachar.UseVisualStyleBackColor = true;
+            this.btnDespachar.Click += new System.EventHandler(this.btnDespachar_Click);
             // 
             // lbCoca
             // 

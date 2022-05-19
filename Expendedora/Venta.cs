@@ -64,6 +64,32 @@ namespace Expendedora
             this.Saldo = this.Saldo + saldo;
         }
 
+        public void despachar(int refresco)
+        {
+            switch (refresco)
+            {
+                case 1:
+                    this.Cantidad_coca = this.Cantidad_coca - 1;
+                    break;
+                case 2:
+                    this.Cantidad_fresca = this.Cantidad_fresca - 1;
+                    break;
+                case 3:
+                    this.Cantidad_fanta = this.Cantidad_fanta - 1;
+                    break;
+                case 4:
+                    this.Cantidad_sprite = this.Cantidad_sprite - 1;
+                    break;
+                case 5:
+                    this.Cantidad_manzanita = this.Cantidad_manzanita - 1;
+                    break;
+            }
+
+            this.Saldo = 0;
+            this.Cambio = 0;
+
+        }
+
 
     }
 }
