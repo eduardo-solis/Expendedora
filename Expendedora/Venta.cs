@@ -59,6 +59,11 @@ namespace Expendedora
             this.Precio = precio;
         }
 
+        public void modificar_saldo(double saldo)
+        {
+            this.Saldo = this.Saldo + saldo;
+        }
+
 
     }
 }

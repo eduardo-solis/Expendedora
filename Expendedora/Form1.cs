@@ -27,6 +27,31 @@ namespace Expendedora
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
+            venta.Precio = Convert.ToDouble(lbPrecio.Text);
+            venta.Saldo = Convert.ToDouble(lbSaldo.Text);
+            double moneda = Convert.ToDouble(txtMoneda.Text);
+
+            if (moneda == 0.5 || moneda == 1 || moneda == 2 || moneda == 5 || moneda == 10)
+            {
+                venta.modificar_saldo(moneda);
+
+                lbSaldo.Text = Convert.ToString(venta.Saldo);
+
+                if (venta.Saldo >= venta.Precio)
+                {
+                    groupBox1.Enabled = true;
+                    btnDespachar.Enabled = true;
+
+                    venta.Cambio = venta.Saldo - venta.Precio;
+                    lbCambio.Text = Convert.ToString(venta.Cambio);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("La moneda ingresada debe ser de 0.50, 1, 2, 5 o 10 pesos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
 
         }
 
