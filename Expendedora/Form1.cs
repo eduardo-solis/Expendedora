@@ -36,32 +36,38 @@ namespace Expendedora
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
-            
-            double moneda = Convert.ToDouble(txtMoneda.Text);
-
-            if (moneda == 0.5 || moneda == 1 || moneda == 2 || moneda == 5 || moneda == 10)
+            try
             {
-                venta.modificar_saldo(moneda);
+                double moneda = Convert.ToDouble(txtMoneda.Text);
 
-                lbSaldo.Text = Convert.ToString(venta.Saldo);
-
-                if (venta.Saldo >= venta.Precio)
+                if (moneda == 0.5 || moneda == 1 || moneda == 2 || moneda == 5 || moneda == 10)
                 {
-                    groupBox1.Enabled = true;
-                    btnDespachar.Enabled = true;
-                    btnInsertar.Enabled = false;
+                    venta.modificar_saldo(moneda);
 
-                    venta.Cambio = venta.Saldo - venta.Precio;
-                    lbCambio.Text = Convert.ToString(venta.Cambio);
+                    lbSaldo.Text = Convert.ToString(venta.Saldo);
+
+                    if (venta.Saldo >= venta.Precio)
+                    {
+                        groupBox1.Enabled = true;
+                        btnDespachar.Enabled = true;
+                        btnInsertar.Enabled = false;
+
+                        venta.Cambio = venta.Saldo - venta.Precio;
+                        lbCambio.Text = Convert.ToString(venta.Cambio);
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("La moneda ingresada debe ser de 0.50, 1, 2, 5 o 10 pesos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
+                txtMoneda.Text = "";
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("La moneda ingresada debe ser de 0.50, 1, 2, 5 o 10 pesos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message + "\nDebe ser un numero decimal.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            txtMoneda.Text = "";
             
 
         }
@@ -179,6 +185,8 @@ namespace Expendedora
 
             lbSaldo.Text = Convert.ToString(venta.Saldo);
             lbCambio.Text = Convert.ToString(venta.Cambio);
+
+            MessageBox.Show("Gracias por su compra.", "Gracias", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             groupBox1.Enabled = false;
             btnDespachar.Enabled = false;
