@@ -60,8 +60,10 @@ namespace Expendedora
             this.rbtnFresca = new System.Windows.Forms.RadioButton();
             this.rbtnCoca = new System.Windows.Forms.RadioButton();
             this.btnDespachar = new System.Windows.Forms.Button();
+            this.pbRefresco = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRefresco)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -174,6 +176,7 @@ namespace Expendedora
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.surtirToolStripMenuItem,
             this.precioToolStripMenuItem});
@@ -262,7 +265,7 @@ namespace Expendedora
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox1.Location = new System.Drawing.Point(30, 283);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(242, 178);
+            this.groupBox1.Size = new System.Drawing.Size(246, 177);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Refrescos";
@@ -335,6 +338,7 @@ namespace Expendedora
             this.rbtnManzanita.TabStop = true;
             this.rbtnManzanita.Text = "Manzanita";
             this.rbtnManzanita.UseVisualStyleBackColor = true;
+            this.rbtnManzanita.CheckedChanged += new System.EventHandler(this.rbtnManzanita_CheckedChanged);
             // 
             // rbtnSprite
             // 
@@ -348,6 +352,7 @@ namespace Expendedora
             this.rbtnSprite.TabStop = true;
             this.rbtnSprite.Text = "Sprite";
             this.rbtnSprite.UseVisualStyleBackColor = true;
+            this.rbtnSprite.CheckedChanged += new System.EventHandler(this.rbtnSprite_CheckedChanged);
             // 
             // rbtnFanta
             // 
@@ -361,6 +366,7 @@ namespace Expendedora
             this.rbtnFanta.TabStop = true;
             this.rbtnFanta.Text = "Fanta";
             this.rbtnFanta.UseVisualStyleBackColor = true;
+            this.rbtnFanta.CheckedChanged += new System.EventHandler(this.rbtnFanta_CheckedChanged);
             // 
             // rbtnFresca
             // 
@@ -374,6 +380,7 @@ namespace Expendedora
             this.rbtnFresca.TabStop = true;
             this.rbtnFresca.Text = "Fresca";
             this.rbtnFresca.UseVisualStyleBackColor = true;
+            this.rbtnFresca.CheckedChanged += new System.EventHandler(this.rbtnFresca_CheckedChanged);
             // 
             // rbtnCoca
             // 
@@ -387,6 +394,7 @@ namespace Expendedora
             this.rbtnCoca.TabStop = true;
             this.rbtnCoca.Text = "Coca - Cola";
             this.rbtnCoca.UseVisualStyleBackColor = true;
+            this.rbtnCoca.CheckedChanged += new System.EventHandler(this.rbtnCoca_CheckedChanged);
             // 
             // btnDespachar
             // 
@@ -394,7 +402,7 @@ namespace Expendedora
             this.btnDespachar.Enabled = false;
             this.btnDespachar.Font = new System.Drawing.Font("MV Boli", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDespachar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnDespachar.Location = new System.Drawing.Point(94, 491);
+            this.btnDespachar.Location = new System.Drawing.Point(112, 506);
             this.btnDespachar.Name = "btnDespachar";
             this.btnDespachar.Size = new System.Drawing.Size(340, 23);
             this.btnDespachar.TabIndex = 12;
@@ -402,12 +410,23 @@ namespace Expendedora
             this.btnDespachar.UseVisualStyleBackColor = false;
             this.btnDespachar.Click += new System.EventHandler(this.btnDespachar_Click);
             // 
+            // pbRefresco
+            // 
+            this.pbRefresco.Image = global::Expendedora.Properties.Resources.negro;
+            this.pbRefresco.Location = new System.Drawing.Point(395, 280);
+            this.pbRefresco.Name = "pbRefresco";
+            this.pbRefresco.Size = new System.Drawing.Size(108, 192);
+            this.pbRefresco.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbRefresco.TabIndex = 13;
+            this.pbRefresco.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(559, 543);
+            this.ClientSize = new System.Drawing.Size(559, 566);
+            this.Controls.Add(this.pbRefresco);
             this.Controls.Add(this.btnDespachar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lbCambio);
@@ -428,6 +447,7 @@ namespace Expendedora
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRefresco)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -466,6 +486,7 @@ namespace Expendedora
         private System.Windows.Forms.ToolStripMenuItem spriteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manzanitaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cambiarToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pbRefresco;
     }
 }
 

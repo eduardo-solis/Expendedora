@@ -49,6 +49,7 @@ namespace Expendedora
                 {
                     groupBox1.Enabled = true;
                     btnDespachar.Enabled = true;
+                    btnInsertar.Enabled = false;
 
                     venta.Cambio = venta.Saldo - venta.Precio;
                     lbCambio.Text = Convert.ToString(venta.Cambio);
@@ -168,7 +169,7 @@ namespace Expendedora
             if (rbtnSprite.Checked) 
             { 
                 venta.despachar(4);
-                lbSprite.Text = Convert.ToString(venta.Cantidad_sprite);
+                lbFanta.Text = Convert.ToString(venta.Cantidad_sprite);
             }
             if (rbtnManzanita.Checked) 
             { 
@@ -181,7 +182,34 @@ namespace Expendedora
 
             groupBox1.Enabled = false;
             btnDespachar.Enabled = false;
+            btnInsertar.Enabled = true;
+            pbRefresco.Image = Expendedora.Properties.Resources.negro;
 
+        }
+
+        private void rbtnCoca_CheckedChanged(object sender, EventArgs e)
+        {
+            pbRefresco.Image = Expendedora.Properties.Resources.cocacola;
+        }
+
+        private void rbtnFresca_CheckedChanged(object sender, EventArgs e)
+        {
+            pbRefresco.Image = Expendedora.Properties.Resources.fresca;
+        }
+
+        private void rbtnFanta_CheckedChanged(object sender, EventArgs e)
+        {
+            pbRefresco.Image = Expendedora.Properties.Resources.fanta;
+        }
+
+        private void rbtnSprite_CheckedChanged(object sender, EventArgs e)
+        {
+            pbRefresco.Image = Expendedora.Properties.Resources.sprite;
+        }
+
+        private void rbtnManzanita_CheckedChanged(object sender, EventArgs e)
+        {
+            pbRefresco.Image = Expendedora.Properties.Resources.manzanita;
         }
     }
 }
