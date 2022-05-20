@@ -52,6 +52,28 @@ namespace Expendedora
                         btnDespachar.Enabled = true;
                         btnInsertar.Enabled = false;
 
+                        if(lbCoca.Text == "0")
+                        {
+                            rbtnCoca.Enabled = false;
+                        }
+                        if (lbFanta.Text == "0")
+                        {
+                            rbtnFanta.Enabled = false;
+                        }
+                        if (lbFresca.Text == "0")
+                        {
+                            rbtnFresca.Enabled = false;
+                        }
+                        if (lbSprite.Text == "0")
+                        {
+                            rbtnSprite.Enabled = false;
+                        }
+                        if (lbManzanita.Text == "0")
+                        {
+                            rbtnManzanita.Enabled = false;
+                        }
+
+
                         venta.Cambio = venta.Saldo - venta.Precio;
                         lbCambio.Text = Convert.ToString(venta.Cambio);
                     }
@@ -145,9 +167,20 @@ namespace Expendedora
         {
             try
             {
-                double nuevo_precio = Convert.ToDouble(Microsoft.VisualBasic.Interaction.InputBox("Ingrese el precio de los refrescos", "Precio del refresco", "4,5"));
-                venta.Precio = nuevo_precio;
-                lbPrecio.Text = Convert.ToString(venta.Precio);
+
+                
+                String nuevo_precio = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el precio de los refrescos", "Precio del refresco", "4,5");
+                if ( nuevo_precio.Contains(",5") || !nuevo_precio.Contains(",") )
+                {
+                    
+                    venta.Precio = Convert.ToDouble(nuevo_precio);
+                    lbPrecio.Text = Convert.ToString(venta.Precio);
+                }
+                else
+                {
+                    MessageBox.Show("El precio debe terminar en 0.5", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
             }
             catch(Exception ex)
             {
@@ -192,6 +225,14 @@ namespace Expendedora
             btnDespachar.Enabled = false;
             btnInsertar.Enabled = true;
             pbRefresco.Image = Expendedora.Properties.Resources.negro;
+
+            rbtnCoca.Checked = false;
+            rbtnFresca.Checked = false;
+            rbtnFanta.Checked = false;
+            rbtnSprite.Checked = false;
+            rbtnManzanita.Checked = false;
+
+
 
         }
 

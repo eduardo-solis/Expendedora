@@ -278,9 +278,9 @@ namespace Expendedora
             this.lbManzanita.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbManzanita.Location = new System.Drawing.Point(27, 137);
             this.lbManzanita.Name = "lbManzanita";
-            this.lbManzanita.Size = new System.Drawing.Size(22, 21);
+            this.lbManzanita.Size = new System.Drawing.Size(29, 21);
             this.lbManzanita.TabIndex = 9;
-            this.lbManzanita.Text = "5";
+            this.lbManzanita.Text = "15";
             // 
             // lbSprite
             // 
@@ -289,9 +289,9 @@ namespace Expendedora
             this.lbSprite.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbSprite.Location = new System.Drawing.Point(27, 113);
             this.lbSprite.Name = "lbSprite";
-            this.lbSprite.Size = new System.Drawing.Size(22, 21);
+            this.lbSprite.Size = new System.Drawing.Size(29, 21);
             this.lbSprite.TabIndex = 8;
-            this.lbSprite.Text = "5";
+            this.lbSprite.Text = "15";
             // 
             // lbFanta
             // 
@@ -300,9 +300,9 @@ namespace Expendedora
             this.lbFanta.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbFanta.Location = new System.Drawing.Point(27, 89);
             this.lbFanta.Name = "lbFanta";
-            this.lbFanta.Size = new System.Drawing.Size(22, 21);
+            this.lbFanta.Size = new System.Drawing.Size(29, 21);
             this.lbFanta.TabIndex = 7;
-            this.lbFanta.Text = "5";
+            this.lbFanta.Text = "15";
             // 
             // lbFresca
             // 
@@ -311,9 +311,9 @@ namespace Expendedora
             this.lbFresca.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbFresca.Location = new System.Drawing.Point(27, 65);
             this.lbFresca.Name = "lbFresca";
-            this.lbFresca.Size = new System.Drawing.Size(22, 21);
+            this.lbFresca.Size = new System.Drawing.Size(29, 21);
             this.lbFresca.TabIndex = 6;
-            this.lbFresca.Text = "5";
+            this.lbFresca.Text = "15";
             // 
             // lbCoca
             // 
@@ -322,9 +322,9 @@ namespace Expendedora
             this.lbCoca.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbCoca.Location = new System.Drawing.Point(27, 41);
             this.lbCoca.Name = "lbCoca";
-            this.lbCoca.Size = new System.Drawing.Size(29, 21);
+            this.lbCoca.Size = new System.Drawing.Size(17, 21);
             this.lbCoca.TabIndex = 5;
-            this.lbCoca.Text = "10";
+            this.lbCoca.Text = "1";
             // 
             // rbtnManzanita
             // 
